@@ -17,10 +17,6 @@ function resolveParameterValue(value: ParameterValue | undefined): string {
 }
 
 export async function POST(request: Request) {
-  console.log('SUPABASE_URL:', process.env.NEXT_PUBLIC_SUPABASE_URL)
-  console.log('SERVICE_KEY prefix:', process.env.SUPABASE_SERVICE_ROLE_KEY?.slice(0, 20))
-  console.log('ANON_KEY prefix:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.slice(0, 20))
-
   // Auth check — use anon client so session cookies are read correctly
   const supabase = createClient()
   const {

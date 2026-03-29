@@ -12,9 +12,14 @@ export interface CategorizedEvent extends ParsedEvent {
   assignment_type: string
 }
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY! })
+function getGroqClient(): Groq {
+  const apiKey = process.env.GROQ_API_KEY
+  if (!apiKey) throw new Error('GROQ_API_KEY environment variable is not set')
+  return new Groq({ apiKey })
+}
 
 export async function categorizeEvents(events: ParsedEvent[]): Promise<CategorizedEvent[]> {
+  const groq = getGroqClient()
   const results: Array<{ ical_uid: string; class_name: string; assignment_type: string }> = []
 
   for (let i = 0; i < events.length; i += 20) {
