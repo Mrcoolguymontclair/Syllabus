@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: ['node-ical'],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
