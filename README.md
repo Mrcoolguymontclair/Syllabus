@@ -1,4 +1,4 @@
-# Schoology To-Do
+# Syllabus
 
 AI-powered to-do list that syncs your Schoology assignments and categorizes them automatically.
 
@@ -95,7 +95,7 @@ Open [http://localhost:3000](http://localhost:3000) and sign in with Google.
 2. Go to **Calendar** (top navigation bar)
 3. Click the **Subscribe** or **iCal** button (usually a small calendar icon in the top-right of the calendar view)
 4. Copy the `webcal://` link that appears
-5. Paste it into the Schoology To-Do sync input — the app automatically converts `webcal://` to `https://`
+5. Paste it into the Syllabus sync input — the app automatically converts `webcal://` to `https://`
 
 ## Deployment (Vercel)
 

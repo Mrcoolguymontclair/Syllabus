@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Schoology To-Do",
+  title: "Syllabus",
   description: "Sync your Schoology assignments into a to-do list",
 };
 
